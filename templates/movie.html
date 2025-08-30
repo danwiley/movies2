@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .loading-popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .loading-popup .content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+    .loading-popup .spinner {
+      border: 4px solid rgba(0,0,0,0.1);
+      border-radius: 50%;
+      border-top: 4px solid #000;
+      width: 40px; height: 40px;
+      animation: spin 1.2s linear infinite;
+      margin: 10px;
+    }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .loading-popup .text {
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #000;
+    }
+    .loading-popup .cancel-btn {
+      background: #ff4c4c;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .loading-popup .cancel-btn:hover { background: #ff0000; }
+  </style>
+</head>
+<body class="min-h-screen bg-zinc-800 dark:bg-zinc-900 text-white dark:text-zinc-100">
+  <div class="container mx-auto p-4">
+    <div id="movie-details" class="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-8"></div>
+    <div id="movie-suggestions" class="mt-8">
+      <h2 class="text-2xl font-semibold mb-4">You might also like:</h2>
+      <div class="flex flex-wrap justify-center lg:justify-start -mx-2"></div>
+    </div>
+  </div>
+
+  <div class="loading-popup" id="loading-popup">
+    <div class="content">
+      <div class="text">
+        <span id="movie-title"></span>
+        <span id="movie-quality"></span>
+        <div class="spinner"></div>
+      </div>
+      <button class="cancel-btn" onclick="hideLoadingPopup()">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    const ip = window.location.hostname,
+          port = window.location.port,
+          site_url = `http://${ip}:${port}`,
+          omdbApiKey = '1c7a44b3'; // Replace with your OMDB API key
+    const qs = sel => document.querySelector(sel);
+    let currentMovie = null; // to store current movie details
+    let isSaved = false; // flag to track if movie is saved
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const movieDetails = document.getElementById('movie-details'),
+            suggestionsContainer = document.querySelector('#movie-suggestions div');
+      const urlParams = new URLSearchParams(window.location.search),
+            movieId = urlParams.get('movie_id');
+      if (!movieId) {
+        movieDetails.innerHTML = '<p class="text-center">Invalid movie ID.</p>';
+        suggestionsContainer.innerHTML = '<p class="text-center">Invalid movie ID.</p>';
+        return;
+      }
+      // Fetch movie details from YTS
+      fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${movieId}`)
+        .then(r => r.json())
+        .then(data => {
+          if (data.data && data.data.movie) {
+            const movie = data.data.movie;
+            currentMovie = movie; // store movie details globally
+            const imdbId = movie.imdb_code;
+            document.getElementById('movie-title').innerHTML = '&nbsp;' + movie.title;
+            // Fetch extra movie info from OMDB
+            fetch(`https://www.omdbapi.com/?i=${imdbId}&apikey=${omdbApiKey}`)
+              .then(r => r.json())
+              .then(omdbData => {
+                if (omdbData.Response === 'True') {
+                  movieDetails.innerHTML =
+                    `<div class="w-full lg:w-1/3 flex-shrink-0">
+                      <img src="${movie.large_cover_image}" alt="Movie Poster ${movie.title}" class="w-full rounded-lg shadow-md">
+                    </div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="flex justify-between items-center">
+                        <h1 class="text-3xl font-semibold mb-2">${movie.title}</h1>
+                        <div class="flex space-x-2">
+                          <button onclick="history.back()" class="bg-blue-500 text-white px-4 py-2 rounded">Go Back</button>
+                          <button onclick="toggleSaveMovie()" id="save-movie-btn" class="bg-green-500 text-white px-4 py-2 rounded">Save Movie</button>
+                        </div>
+                      </div>
+                      <p class="mb-2"><strong>Year:</strong> ${movie.year}</p>
+                      <p class="mb-2"><strong>Rating:</strong> ${movie.rating}</p>
+                      <p class="mb-2"><strong>Genres:</strong> ${movie.genres.join(', ')}</p>
+                      <p class="mb-4"><strong>Description:</strong> ${omdbData.Plot}</p>
+                      <table class="w-full">
+                        <thead>
+                          <tr>
+                            <th class="px-4 py-2">Quality</th>
+                            <th class="px-4 py-2">Size</th>
+                            <th class="px-4 py-2">Stream</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${getTorrentRows(movie.torrents, movie)}
+                        </tbody>
+                      </table>
+                    </div>`;
+                  // Initialize stream buttons via a single request for all torrents
+                  initStreamButtons();
+                  // Check if the movie is already saved and update the button accordingly
+                  checkIfMovieSaved();
+                } else {
+                  movieDetails.innerHTML = '<p class="text-center">Failed to load movie description from IMDb.</p>';
+                }
+              });
+          } else {
+            movieDetails.innerHTML = '<p class="text-center">Movie details not found.</p>';
+          }
+        });
+      // Fetch movie suggestions from YTS
+      fetch(`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${movieId}`)
+        .then(r => r.json())
+        .then(data => {
+          if (data.data && data.data.movies) {
+            suggestionsContainer.innerHTML = data.data.movies.map(m =>
+              `<a href="?movie_id=${m.id}" class="block w-32 mx-2">
+                <img src="${m.medium_cover_image}" alt="Thumbnail for ${m.title}" class="w-full rounded-lg shadow-md">
+                <p class="text-center mt-2 text-sm">${m.title}</p>
+              </a>`
+            ).join('');
+          } else {
+            suggestionsContainer.innerHTML = '<p class="text-center">No suggestions found.</p>';
+          }
+        });
+    });
+
+    function showLoadingPopup() {
+      document.getElementById('loading-popup').style.display = 'flex';
+    }
+    function hideLoadingPopup() {
+      document.getElementById('loading-popup').style.display = 'none';
+      fetch(`http://${ip}:5020/exit`, { mode: 'no-cors' });
+    }
+    function checkLoadingPopupStatus() {
+      return document.getElementById('loading-popup').style.display;
+    }
+
+    // Build torrent rows with unique qualities (ignoring 3D)
+    function getTorrentRows(torrents, movie) {
+      const uniq = {};
+      torrents.forEach(t => {
+        if (t.quality === '3D') return;
+        if (!uniq[t.quality] || uniq[t.quality].size_bytes > t.size_bytes) uniq[t.quality] = t;
+      });
+      return Object.values(uniq).map(t =>
+        `<tr>
+          <td class="border px-4 py-2 text-center">${t.quality}</td>
+          <td class="border px-4 py-2 text-center">${t.size}</td>
+          <td class="border px-4 py-2 text-center">
+            <form class="stream-form" action="/download" method="post" onsubmit="event.preventDefault();">
+              <input type="hidden" name="url" value="${t.url}">
+              <input type="hidden" name="quality" value="${t.quality}">
+              <button type="submit" class="bg-gray-500 text-white px-4 py-2 rounded cursor-not-allowed" disabled>Stream Movie</button>
+            </form>
+          </td>
+        </tr>`
+      ).join('');
+    }
+
+    // New function to initialize stream buttons with one /download request for all torrents
+    function initStreamButtons() {
+      const forms = document.querySelectorAll('.stream-form');
+      let torrentData = [];
+      forms.forEach(form => {
+        const url = form.querySelector('input[name="url"]').value;
+        const quality = form.querySelector('input[name="quality"]').value;
+        torrentData.push({ url, quality });
+      });
+      // Send a single POST request with all torrent URLs as JSON
+      fetch('/download', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ torrents: torrentData })
+      })
+      .then(r => r.json())
+      .then(response => {
+        if (response.status === 'success') {
+          // Build a mapping from torrent URL to file magnet
+          const mapping = {};
+          response.data.forEach(item => {
+            mapping[item.url] = item.file_magnet;
+          });
+          // Update each form's button to enable streaming
+          forms.forEach(form => {
+            const btn = form.querySelector('button');
+            const quality = form.querySelector('input[name="quality"]').value;
+            const url = form.querySelector('input[name="url"]').value;
+            btn.classList.replace('bg-gray-500', 'bg-blue-500');
+            btn.classList.replace('cursor-not-allowed', 'cursor-pointer');
+            btn.disabled = false;
+            btn.addEventListener('click', () => {
+              document.getElementById('movie-quality').innerHTML = `Quality: ${quality}`;
+              showLoadingPopup();
+              const file_magnet = mapping[url];
+              const watchUrl = `http://${ip}:5020/watch/${file_magnet.substring(8)}`;
+              fetch(watchUrl)
+                .then(r => r.text())
+                .then(movie_name => {
+                  fetch(`http://${ip}:5000/subtitles/${movie_name}`);
+                  fetch(`http://${ip}:5020/torrent`);
+                  setTimeout(() => {
+                    if (checkLoadingPopupStatus() === "flex") {
+                      window.location.href = `${site_url}/stream/${movie_name}`;
+                      document.getElementById('loading-popup').style.display = 'none';
+                    }
+                  }, 22000);
+                });
+            });
+          });
+        }
+      });
+    }
+
+    // Check if currentMovie is already saved by fetching /saved_movies
+    async function checkIfMovieSaved() {
+      if (!currentMovie) return;
+      const res = await fetch('/saved_movies');
+      const savedMovies = await res.json();
+      const btn = document.getElementById('save-movie-btn');
+      isSaved = Array.isArray(savedMovies) && savedMovies.some(m => m.id == currentMovie.id);
+      updateButton(btn);
+    }
+    const updateButton = btn => {
+      btn.textContent = isSaved ? "Unsave Movie" : "Save Movie";
+    };
+
+    async function toggleSaveMovie() {
+      if (!currentMovie) return;
+      const btn = document.getElementById('save-movie-btn');
+      const formData = new FormData();
+      formData.append('movie_data', encodeURIComponent(JSON.stringify(currentMovie)));
+      formData.append('action', isSaved ? 'unsave' : 'save');
+
+      const res = await fetch('/saved_movies', { method: 'POST', body: formData });
+      isSaved = !isSaved;
+      updateButton(btn);
+    }
+  </script>
+</body>
+</html>

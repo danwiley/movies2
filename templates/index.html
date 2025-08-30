@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Movies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .movie-card:hover { transform: scale(1.05); }
+    .disabled { opacity: 0.5; pointer-events: none; }
+    .active-btn {
+      background-color: #4ade80 !important;
+      color: #1f2937 !important;
+    }
+    .vod-card .poster-wrapper { padding-top: 150%; } /* 2:3 approx */
+    .livetv-card .poster-wrapper { padding-top: 60%; } /* 220x132 ratio (~1.66) */
+    .livetv-card .movie-title { direction: rtl; text-align: right; }
+  </style>
+</head>
+<body class="min-h-screen bg-zinc-800 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
+  <div class="container mx-auto p-4">
+    <div class="mb-4">
+      <label for="content-type-select" class="block text-white mb-2">Content Type:</label>
+      <select id="content-type-select" class="bg-zinc-700 text-white py-2 px-4 rounded w-full">
+        <option value="vod">VOD</option>
+        <option value="livetv">LIVE TV</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label id="search-label" for="search-input" class="block text-white mb-2">Search Movies:</label>
+      <div id="search-wrapper" class="flex w-full">
+        <input id="search-input" type="text"
+          class="bg-zinc-700 text-white py-2 px-4 rounded w-full"
+          placeholder="Search for a movie...">
+        <button id="saved-movies"
+          class="bg-zinc-700 text-white py-2 px-4 rounded ml-2 whitespace-nowrap">
+          Saved Channels
+        </button>
+      </div>
+    </div>
+
+    <div id="filters-container" class="mb-4 flex space-x-4">
+      <div class="w-1/2">
+        <label for="genre-select" class="block text-white mb-2">Filter by Genre:</label>
+        <select id="genre-select" class="bg-zinc-700 text-white py-2 px-4 rounded w-full">
+          <option value="">All</option>
+          <option>Action</option><option>Adventure</option><option>Animation</option>
+          <option>Biography</option><option>Comedy</option><option>Crime</option>
+          <option>Documentary</option><option>Drama</option><option>Family</option>
+          <option>Fantasy</option><option>Film-Noir</option><option>History</option>
+          <option>Horror</option><option>Music</option><option>Musical</option>
+          <option>Mystery</option><option>Romance</option><option>Sci-Fi</option>
+          <option>Sport</option><option>Thriller</option><option>War</option><option>Western</option>
+        </select>
+      </div>
+      <div class="w-1/2">
+        <label for="sort-select" class="block text-white mb-2">Sort by:</label>
+        <select id="sort-select" class="bg-zinc-700 text-white py-2 px-4 rounded w-full">
+          <option value="download">Downloads</option>
+          <option value="popularity">Popularity</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mb-4 flex space-x-4">
+      <button id="clear-filters" class="bg-red-500 text-white px-4 py-2 rounded">Clear Filters</button>
+    </div>
+
+    <div id="movies-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4"></div>
+    <div class="flex justify-between items-center">
+      <button id="prev-page" class="bg-blue-500 text-white px-4 py-2 rounded disabled:opacity-50" disabled>Previous</button>
+      <div id="page-indicator" class="text-white">Page 1</div>
+      <button id="next-page" class="bg-blue-500 text-white px-4 py-2 rounded">Next</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const qs = (sel) => document.getElementById(sel);
+      const moviesGrid = qs('movies-grid'),
+            prevPageButton = qs('prev-page'),
+            nextPageButton = qs('next-page'),
+            pageIndicator = qs('page-indicator'),
+            genreSelect = qs('genre-select'),
+            searchInput = qs('search-input'),
+            sortSelect = qs('sort-select'),
+            clearFiltersButton = qs('clear-filters'),
+            savedMoviesButton = qs('saved-movies'),
+            contentTypeSelect = qs('content-type-select'),
+            filtersContainer = qs('filters-container'),
+            searchLabel = qs('search-label'),
+            searchWrapper = qs('search-wrapper');
+
+      let currentPage = 1, currentGenre = '', currentSearch = '', currentSort = 'download';
+      let savedMoviesActive = false;
+      let contentType = 'vod';
+      let allLiveTVData = []; // store full live TV dataset
+
+      const { hostname: ip, port } = window.location;
+      const site_url = `http://${ip}:${port}`;
+
+      const updateURL = () => {
+        const params = new URLSearchParams({ page: currentPage });
+        if (currentGenre) params.set('genre', currentGenre);
+        if (currentSearch) params.set('search', currentSearch);
+        if (savedMoviesActive) {
+          params.set('sort', 'saved_movies');
+        } else if (currentSort) {
+          params.set('sort', currentSort);
+        }
+        params.set('type', contentType);
+        window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+      };
+
+      const renderMovies = (movies, isLive = false) => {
+        moviesGrid.innerHTML = movies.length
+          ? movies.map(movie => {
+              const cardClass = isLive ? 'livetv-card' : 'vod-card';
+              const href = isLive
+                ? `/stream_live?channel_id=${movie.index}`
+                : `movie.html?movie_id=${movie.id}`;
+              return `
+              <a href="${href}" data-id="${movie.id}"
+                class="bg-white dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden transition-transform duration-300 movie-card ${cardClass}">
+                <div class="relative w-full poster-wrapper">
+                  <img src="${movie.large_cover_image}" alt="Poster ${movie.title}"
+                    class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="p-4 movie-title">${movie.title}</div>
+              </a>
+              `;
+            }).join('')
+          : '<p class="text-center col-span-full">No movies data found.</p>';
+
+        prevPageButton.disabled = currentPage === 1;
+        nextPageButton.disabled = movies.length < 12;
+        pageIndicator.textContent = `Page ${currentPage}`;
+        updateURL();
+      };
+
+      const fetchMovies = (page = 1, genre = '', search = '', sort = 'download') => {
+        let url = '';
+        if (savedMoviesActive) {
+          url = `${site_url}/saved_movies`;
+        } else if (contentType === 'livetv') {
+          url = `${site_url}/livetv`;
+        } else if (sort === 'download') {
+          url = `https://yts.mx/api/v2/list_movies.json?limit=12&sort_by=download_count&page=${page}`;
+          if (genre) url += `&genre=${genre}`;
+          if (search) url += `&query_term=${search}`;
+        } else {
+          url = `${site_url}/popular_movies`;
+        }
+
+        fetch(url)
+          .then(r => r.json())
+          .then(data => {
+            if (contentType === 'livetv') {
+              allLiveTVData = data; // store full dataset
+              applyLiveTVSearch();  // apply search & pagination
+            } else {
+              const movies = savedMoviesActive
+                ? data.slice((page - 1) * 12, page * 12)
+                : (sort === 'popularity' ? data.slice((page - 1) * 12, page * 12) : data.data?.movies || []);
+              renderMovies(movies);
+            }
+          })
+          .catch(err => {
+            console.error('Error fetching movies:', err);
+            moviesGrid.innerHTML = '<p class="text-center col-span-full">Failed to load movies.</p>';
+          });
+      };
+
+      const applyLiveTVSearch = () => {
+        const term = searchInput.value.toLowerCase();
+        const filtered = allLiveTVData.filter(ch =>
+          (ch.title && ch.title.toLowerCase().includes(term)) ||
+          (ch.channel && ch.channel.toLowerCase().includes(term))
+        );
+        const paged = filtered.slice((currentPage - 1) * 12, currentPage * 12);
+        renderMovies(paged, true);
+      };
+
+      const getQueryParams = () => {
+        const params = new URLSearchParams(window.location.search);
+        currentPage = +params.get('page') || 1;
+        currentGenre = params.get('genre') || '';
+        currentSearch = params.get('search') || '';
+        const urlSort = params.get('sort') || 'download';
+        if (urlSort === 'saved_movies') {
+          savedMoviesActive = true;
+          savedMoviesButton.classList.add('active-btn');
+          currentSort = 'download';
+        } else {
+          currentSort = urlSort;
+        }
+        contentType = params.get('type') || 'vod';
+
+        genreSelect.value = currentGenre;
+        searchInput.value = currentSearch;
+        sortSelect.value = currentSort;
+        contentTypeSelect.value = contentType;
+      };
+
+      const updateFilters = () => {
+        if (contentType === 'livetv') {
+          filtersContainer.style.display = 'none';
+          searchLabel.textContent = 'Search Channels:';
+          searchInput.placeholder = 'Search for a channel...';
+          savedMoviesButton.style.display = 'none';
+
+          searchWrapper.classList.add('relative');
+          searchInput.classList.add('pr-36');
+          savedMoviesButton.style.position = 'absolute';
+          savedMoviesButton.style.right = '0.5rem';
+          savedMoviesButton.style.top = '50%';
+          savedMoviesButton.style.transform = 'translateY(-50%)';
+        } else {
+          filtersContainer.style.display = 'flex';
+          searchLabel.textContent = 'Search Movies:';
+          searchInput.placeholder = 'Search for a movie...';
+          savedMoviesButton.style.display = 'inline-block';
+
+          searchWrapper.classList.remove('relative');
+          searchInput.classList.remove('pr-36');
+          savedMoviesButton.style.position = 'static';
+          savedMoviesButton.style.transform = 'none';
+        }
+
+        const disableInputs = savedMoviesActive || currentSort === 'popularity';
+        genreSelect.disabled = disableInputs;
+        searchInput.disabled = disableInputs;
+        genreSelect.classList.toggle('disabled', disableInputs);
+        searchInput.classList.toggle('disabled', disableInputs);
+
+        sortSelect.disabled = savedMoviesActive;
+        sortSelect.classList.toggle('disabled', savedMoviesActive);
+      };
+
+      // Event listeners
+      prevPageButton.addEventListener('click', () => { if (currentPage > 1) currentPage--; fetchMovies(currentPage, currentGenre, currentSearch, currentSort); });
+      nextPageButton.addEventListener('click', () => { currentPage++; fetchMovies(currentPage, currentGenre, currentSearch, currentSort); });
+
+      genreSelect.addEventListener('change', () => { currentGenre = genreSelect.value; currentPage = 1; fetchMovies(currentPage, currentGenre, currentSearch, currentSort); });
+      sortSelect.addEventListener('change', () => { currentSort = sortSelect.value; currentPage = 1; updateFilters(); fetchMovies(currentPage, currentGenre, currentSearch, currentSort); });
+
+      searchInput.addEventListener('input', () => {
+        currentSearch = searchInput.value;
+        currentPage = 1;
+        if (contentType === 'livetv') applyLiveTVSearch();
+        else fetchMovies(currentPage, currentGenre, currentSearch, currentSort);
+      });
+
+      clearFiltersButton.addEventListener('click', () => {
+        currentGenre = '';
+        currentSearch = '';
+        currentSort = 'download';
+        currentPage = 1;
+        searchInput.value = '';
+        genreSelect.value = '';
+        sortSelect.value = 'download';
+        savedMoviesActive = false;
+        savedMoviesButton.classList.remove('active-btn');
+        updateFilters();
+        fetchMovies(currentPage, currentGenre, currentSearch, currentSort);
+      });
+
+      savedMoviesButton.addEventListener('click', () => {
+        savedMoviesActive = !savedMoviesActive;
+        currentPage = 1;
+        savedMoviesButton.classList.toggle('active-btn', savedMoviesActive);
+        updateFilters();
+        fetchMovies(currentPage, currentGenre, currentSearch, currentSort);
+      });
+
+      contentTypeSelect.addEventListener('change', () => {
+        contentType = contentTypeSelect.value;
+        currentPage = 1;
+        updateFilters();
+        fetchMovies(currentPage, currentGenre, currentSearch, currentSort);
+      });
+
+      getQueryParams();
+      updateFilters();
+      fetchMovies(currentPage, currentGenre, currentSearch, currentSort);
+    });
+  </script>
+</body>
+</html>

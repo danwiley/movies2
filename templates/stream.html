@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Player</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: black;
+  }
+  video::cue {
+    background: transparent;
+    color: white;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px black;
+  }
+</style>
+</head>
+<body>
+  <video id="videoPlayer" controls autoplay>
+    <!-- The source and track elements will be populated by JavaScript -->
+  </video>
+
+<script>
+  const ip = window.location.hostname;
+  const port = window.location.port;
+  const site_url = `http://${ip}:${port}`;
+
+  const videoSrc = `http://${ip}:5020/torrent`;
+  const subtitleFiles = {{ subtitle_files|tojson }};
+
+  const videoPlayer = document.getElementById('videoPlayer');
+  const sourceElement = document.createElement('source');
+  sourceElement.setAttribute('src', videoSrc);
+  sourceElement.setAttribute('type', 'video/mp4');
+  videoPlayer.appendChild(sourceElement);
+
+  subtitleFiles.forEach((subtitle, index) => {
+    const trackElement = document.createElement('track');
+    trackElement.setAttribute('src', `${site_url}/static/subtitles/${subtitle}`);
+    trackElement.setAttribute('kind', 'captions');
+    trackElement.setAttribute('srclang', 'he');
+    trackElement.setAttribute('label', `Hebrew${index + 1}`);
+    if (index === 0) {
+      trackElement.setAttribute('default', '');
+    }
+    videoPlayer.appendChild(trackElement);
+  });
+</script>
+
+</body>
+</html>

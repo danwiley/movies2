@@ -1,0 +1,337 @@
+#EXTM3U max-conn="2" url-tvg="https://play-berry.net/xmltv.xml.gz"
+#EXTINF:0 group-title="Israel" tvg-id="9-kanal-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/321babe4b69535b62b58880335577081.png" tvg-rec="7" catchup-days="7",9 Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/9-kanal-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="channel10-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/6fa2639caa1c36e9f501ceade0f0db21.png" tvg-rec="7" catchup-days="7",Channel 10 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/channel10-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="11-kanal-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/6773deb8a03b790ed0c1e153d4309b28.png" tvg-rec="7" catchup-days="7",Kan 11 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/11-kanal-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="12-kanal-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/4b9ab871a6266d2e476181eaa82e74ed.png" tvg-rec="7" catchup-days="7",Keshet 12 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/12-kanal-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="13-kanal-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/ce5ac85b0264b74d822c221df04df44f.png" tvg-rec="7" catchup-days="7",Reshet 13 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/13-kanal-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="14-kanal-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/b6a9f45111dfa2d6bfcfa213cc7171fe.png" tvg-rec="7" catchup-days="7",Ch 14 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/14-kanal-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="i24-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/83cfe85cc2320a6171de022ce71310a5.png" tvg-rec="7" catchup-days="7",i24 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/i24-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-movies-action-hd-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/4cbe6c1ba59c4aff0f639237da734920.png" tvg-rec="7" catchup-days="7",Yes Movies Action HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-movies-action-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-movies-comedy-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/728ea376139f3baece03a44a7a74757e.png" tvg-rec="7" catchup-days="7",Yes Movies Comedy HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-movies-comedy-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-movies-drama-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/9bb4af627bc7c35f56461891788506e1.png" tvg-rec="7" catchup-days="7",Yes Movies Drama HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-movies-drama-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-movies-kids-hd-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/babda05ec10699f716dc13829076ffa2.png" tvg-rec="7" catchup-days="7",Yes Movies KIDS HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-movies-kids-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-action-hd-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/bdf6be5eb26dcbfcbdb7e140e6ead374.png" tvg-rec="7" catchup-days="7",Yes TV Action HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-action-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-comedy-hd-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/76ff54336fba12ca906f530da2f9aa4f.png" tvg-rec="7" catchup-days="7",Yes TV Comedy HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-comedy-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-drama-hd-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/710b8e3086b4c65e2543cbc756689ac3.png" tvg-rec="7" catchup-days="7",Yes TV Drama HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-drama-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-cinema1-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/f14b95e0e8b95995de6e7accdba34762.png" tvg-rec="7" catchup-days="7",HOT Cinema 1 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-cinema1-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-cinema2-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/f18976e8a3236dbdabbb35f73f6e8988.png" tvg-rec="7" catchup-days="7",HOT Cinema 2 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-cinema2-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-cinema3-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/2edb1bb63076c75baacf2674ce8c8c37.png" tvg-rec="7" catchup-days="7",HOT Cinema 3 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-cinema3-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-cinema4-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/e055cf2620f58c60b1e65be4717d2c22.png" tvg-rec="7" catchup-days="7",HOT Cinema 4 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-cinema4-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-israeli-cinema-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/d8e56e46fc1e6926a0dbcd1871fcd50c.png" tvg-rec="7" catchup-days="7",HOT Israeli Cinema HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-israeli-cinema-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="freetv-movies-action-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/9ba65ef6c76ab34925b925bf852a267d.png" tvg-rec="7" catchup-days="7",FreeTV Movies Action HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/freetv-movies-action-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="freetv-movies-comedy-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/ae1fa296578cb157a96084b941bff5c5.png" tvg-rec="7" catchup-days="7",FreeTV Movies Comedy HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/freetv-movies-comedy-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="freetv-movies-horror-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/297777d0f346d8d80dc31470f7ff1293.png" tvg-rec="7" catchup-days="7",FreeTV Movies Horror HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/freetv-movies-horror-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="freetv-movies-drama-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/b1a37cd7c5d5058e9f942a9e88dd6366.png" tvg-rec="7" catchup-days="7",FreeTV Movies Drama HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/freetv-movies-drama-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="freetv-movies-romantic-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/ec5ce9f73c8632ca73fdee13a16982cd.png" tvg-rec="7" catchup-days="7",FreeTV Movies Romantic HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/freetv-movies-romantic-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="freetv-movies-israeli-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/c5d8b8cdd6e8b9e2600daab829b1f7c8.png" tvg-rec="7" catchup-days="7",FreeTV Movies Israeli HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/freetv-movies-israeli-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="freetv-series-comedy-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/a99ff22875ebe96f2d7c9bc8d1979995.png" tvg-rec="7" catchup-days="7",FreeTV Series Comedy HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/freetv-series-comedy-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="freetv-series-drama-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/561005e48881344635976886ece483c3.png" tvg-rec="7" catchup-days="7",FreeTV Series Drama HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/freetv-series-drama-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="freetv-series-global-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/db3867de0242e4cbe37bfeda1d126094.png" tvg-rec="7" catchup-days="7",FreeTV Series Global HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/freetv-series-global-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="global-action-channel-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/a58ce6ae114b39416760b4d5c514dc23.png" tvg-rec="7" catchup-days="7",Global Action Channel 1 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/global-action-channel-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="global-action-channel2-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/4a9577f3afd3755c562c4ce0f5612cb5.png" tvg-rec="7" catchup-days="7",Global Action Channel 2 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/global-action-channel2-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="classic-comedy-channel-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/79240b687eb3930ad0336e05fec2eb00.png" tvg-rec="7" catchup-days="7",Classic Comedy Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/classic-comedy-channel-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="humor-channel-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/8390114f02a34b249a453d4fc03e3a21.png" tvg-rec="7" catchup-days="7",Humor Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/humor-channel-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-comedy-central-il-hd" tvg-logo="https://play-berry.net/storage/images/pack_logos/479ecd9c606cac2ebdfd10a7f5f1297d.png" tvg-rec="7" catchup-days="7",HOT Comedy HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-comedy-central-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-hbo-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/f1acc41f178bee343e8e497bed7a2db0.png" tvg-rec="7" catchup-days="7",HOT Drama HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-hbo-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-zone-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/1bb5cc5b621a35934729462387ecf894.png" tvg-rec="7" catchup-days="7",Zone HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-zone-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot3-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/74c1c0d13bf5172b80ddf344979cf483.png" tvg-rec="7" catchup-days="7",HOT 3 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot3-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-8-il-hd" tvg-logo="https://play-berry.net/storage/images/pack_logos/8ecc8229a90fce1c1181cb721bcb75dd.png" tvg-rec="7" catchup-days="7",HOT 8 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-8-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-israel-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/c034268ecd97e13ccd0b1d108afa4808.png" tvg-rec="7" catchup-days="7",Yes Israeli HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-israel-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="pop-up-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/fee2f9db5d07b54159fbd99bfff11fd9.png" tvg-rec="7" catchup-days="7",Yes Pop Up HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/pop-up-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="entertainment-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/d1a204c0caed85c4de60fa153a3d2391.png" tvg-rec="7" catchup-days="7",Entertainment HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/entertainment-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="channel24-il-hd" tvg-logo="https://play-berry.net/storage/images/pack_logos/a0e0197581415e7215c218e760b0404a.png" tvg-rec="7" catchup-days="7",Channel 24 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/channel24-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="viva-premium-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/68522399805f726cc3ae8af00aff9918.png" tvg-rec="7" catchup-days="7",Viva Premium HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/viva-premium-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="viva-plus-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/3954a525c11d1661962a71793216ae67.png" tvg-rec="7" catchup-days="7",Viva Istanbul HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/viva-plus-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="viva-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/812e7835ac89b0d8d3c55949070c1c57.png" tvg-rec="7" catchup-days="7",Viva Telenovelas HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/viva-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="viva-vintage-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/37e0b663aa479c88486aa0f371722891.png" tvg-rec="7" catchup-days="7",Viva Vintage
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/viva-vintage-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="turkish-dramas-plus-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/fe5883bf87cd0303566dfd3f37b231fa.png" tvg-rec="7" catchup-days="7",Turkish Dramas Plus HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/turkish-dramas-plus-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="turkish-dramas2-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/2ddc07a52d7ab39a1d13d14d1de90429.png" tvg-rec="7" catchup-days="7",Turkish Dramas 2 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/turkish-dramas2-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="turkish-dramas3-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/ede299bd93cb482bab8b5a231d8995c2.png" tvg-rec="7" catchup-days="7",Turkish Dramas 3 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/turkish-dramas3-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yamtihoni-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/c106807b0cc3b511840ea0ec2e804ca8.png" tvg-rec="7" catchup-days="7",Yam Tihoni HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yamtihoni-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yam-tichoni-plus-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/929a0fa393a3f2a01005f7db2550a4ba.png" tvg-rec="7" catchup-days="7",Yam Tichoni+ HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yam-tichoni-plus-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="mediterranean-movie-channel-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/85d5914c8b426f5aa9713a9e0cc1ed6b.png" tvg-rec="7" catchup-days="7",Mediterranean Movie Channel 1 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/mediterranean-movie-channel-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="mediterranean-movie-channel2-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/664e1d46aaaa8c665154e6db5a04c1ac.png" tvg-rec="7" catchup-days="7",Mediterranean Movie Channel 2 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/mediterranean-movie-channel2-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-bollywood-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/7376f18db5830cb2a1baf037392b7012.png" tvg-rec="7" catchup-days="7",Bollywood Indian Movies HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-bollywood-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="bollywood-classic-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/a72a732e4f40af54d3360a5c971d94ae.png" tvg-rec="7" catchup-days="7",Bollywood Indian Classic Movies HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/bollywood-classic-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="indian-series-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/509f8f9d175215df875945507847bbc4.png" tvg-rec="7" catchup-days="7",Indian Drama 1 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/indian-series-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="indian-series2-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/6092ee7d4631001af412d1c8a6ec90e5.png" tvg-rec="7" catchup-days="7",Indian Drama 2 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/indian-series2-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="sport1-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/0b7991265880a94f985149bf8ae3390a.png" tvg-rec="7" catchup-days="7",Sport 1 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/sport1-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="sport2-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/036c7c47bfd5865243a627bdabdb99a9.png" tvg-rec="7" catchup-days="7",Sport 2 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/sport2-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="sport3-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/957ce5b9e2435ce07c2f52a688a50f03.png" tvg-rec="7" catchup-days="7",Sport 3 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/sport3-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="sport4-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/82f490d1762804589363a461344e0b68.png" tvg-rec="7" catchup-days="7",Sport 4 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/sport4-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="sport5-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/65dd4af6185b56b5b887588beb09e6e8.png" tvg-rec="7" catchup-days="7",Sport 5 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/sport5-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-sport5-plus-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/81ac610c4f19c18f59546cf98e506a9a.png" tvg-rec="7" catchup-days="7",Sport 5+ HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-sport5-plus-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="sport5-plus-live-hd-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/85758bb6b1954401ea0089873de669c2.png" tvg-rec="7" catchup-days="7",Sport 5 Live HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/sport5-plus-live-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="sport5-stars-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/8774ff95bacd6c1043410115dd5411f1.png" tvg-rec="7" catchup-days="7",Sport 5 Stars HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/sport5-stars-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="sport5-gold-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/cb557d0e10ae253524a5569cd71201e1.png" tvg-rec="7" catchup-days="7",Sport 5 Gold HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/sport5-gold-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="sport5-il-4k" tvg-logo="https://play-berry.net/storage/images/channel_logos/6a0a4135e0e7453eaeb14354a3931e6c.png" tvg-rec="7" catchup-days="7",Sport 5 4K
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/sport5-il-4k/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="eurosport1-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/d34a36d67031915c4d1d6205c64c847a.png" tvg-rec="7" catchup-days="7",Eurosport 1 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/eurosport1-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="eurosport2-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/f849404337e9ec24893079626acd949f.png" tvg-rec="7" catchup-days="7",Eurosport 2 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/eurosport2-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="one-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/3a24edb4006c59c281db73a8e5af25bf.png" tvg-rec="7" catchup-days="7",One HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/one-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="one2-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/a54ed9c1b81f41539ab3d57a2af75a9b.png" tvg-rec="7" catchup-days="7",One 2 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/one2-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="ego-total-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/1d186d23549beabd6a7b737296f81ac3.png" tvg-rec="7" catchup-days="7",Ego Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/ego-total-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="animal-planet-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/0808cfb235cb144c827d811b1d658c53.png" tvg-rec="7" catchup-days="7",Animal Planet HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/animal-planet-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-natgeo-wild-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/0f5b7d0ba553c98c77f6a61553c60264.png" tvg-rec="7" catchup-days="7",National Geographic Wild HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-natgeo-wild-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-natgeo-il-hd" tvg-logo="https://play-berry.net/storage/images/pack_logos/f8e969a38871f393eeb2fd71f3121ddf.png" tvg-rec="7" catchup-days="7",National Geographic HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-natgeo-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="discovery-hd-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/8a0720a45a9d32602894d1380152a7e7.png" tvg-rec="7" catchup-days="7",Discovery HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/discovery-hd-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="history-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/2d24dea7512ab560e18e8611eb3665ca.png" tvg-rec="7" catchup-days="7",History HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/history-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="travel-channel-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/e43ce618a5987c2c96a9c855b50e7fd5.png" tvg-rec="7" catchup-days="7",HOT Travel Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/travel-channel-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-travel-channel-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/193b7cb68145cf4eebeddb5c333608db.png" tvg-rec="7" catchup-days="7",Yes Travel Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-travel-channel-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-docu-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/3707c13e4e886a939425a71a5fcfb27c.png" tvg-rec="7" catchup-days="7",Yes Docu HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-docu-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="one-doco-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/86d077d2de6a8745b3cd37d929b85c43.png" tvg-rec="7" catchup-days="7",One Doco HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/one-doco-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="vacation-channel-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/607abbaa2260f362b32854c325300ff3.png" tvg-rec="7" catchup-days="7",Vacation Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/vacation-channel-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="home-plus-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/b757f630bc59372d19bcfaf51e9e854d.png" tvg-rec="7" catchup-days="7",Home Plus HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/home-plus-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="tlc-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/4542bcb526441edb214f62c4852cb075.png" tvg-rec="7" catchup-days="7",TLC HD IL
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/tlc-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="big-brother-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/17ae891a703f9a2c6da130a917d073de.png" tvg-rec="7" catchup-days="7",Big Brother HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/big-brother-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="the-design-channel-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/d4c1a85f0b69f02a188da02502f738b4.png" tvg-rec="7" catchup-days="7",Design Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/the-design-channel-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="wedding-at-first-sight-channel-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/c38fab650452b9d38ed8868f81e5a4a7.png" tvg-rec="7" catchup-days="7",Wedding at First Sight Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/wedding-at-first-sight-channel-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="game-show-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/506465e166fbe8df3270b97ad5c60f74.png" tvg-rec="7" catchup-days="7",Game Show HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/game-show-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="e-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/79a7cd7f6cd0740aeea34b9809e451eb.png" tvg-rec="7" catchup-days="7",E! HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/e-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="the-food-channel-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/e95c0bf3db408d03c1922f565df82243.png" tvg-rec="7" catchup-days="7",Food Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/the-food-channel-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="food-network-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/02e6f16947a374e7c70d644f0e9d25d0.png" tvg-rec="7" catchup-days="7",Food Network HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/food-network-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="foody-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/9845a9f5ac2ab723860193771dc7159d.png" tvg-rec="7" catchup-days="7",Foody HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/foody-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-doc-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/c6b38d7034532fa1c08e6d13cdb8daae.png" tvg-rec="7" catchup-days="7",Doc HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-doc-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="health-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/14ed1b55e22153f96adb8d03d2058f1b.png" tvg-rec="7" catchup-days="7",Health HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/health-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="good-life-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/faabeab513011f06606a743fe3e10844.png" tvg-rec="7" catchup-days="7",Good Life HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/good-life-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-reality-channel-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/837859b4c4863800f6f641270153c4c8.png" tvg-rec="7" catchup-days="7",Reality Channel HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-reality-channel-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-real-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/73874c1f67371aa5467a9ed1a00433ca.png" tvg-rec="7" catchup-days="7",HOT Real HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-real-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="cbs-reality-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/0c9f62b9115c5b9eba2c122c3e1ed49c.png" tvg-rec="7" catchup-days="7",CBS Reality
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/cbs-reality-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="cinema-family-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/d5be2842217f91b20c4b92b0067aaa06.png" tvg-rec="7" catchup-days="7",Cinema Family HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/cinema-family-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-disney-il-hd" tvg-logo="https://play-berry.net/storage/images/pack_logos/8953d8d82f60ea411852c4b247f21198.png" tvg-rec="7" catchup-days="7",Disney HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-disney-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="disney-jr-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/3a883327b42ed258bd9f69cd828ccbc4.png" tvg-rec="7" catchup-days="7",Disney Jr
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/disney-jr-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="yes-nickelodeon-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/e9942ae526339552dc1dbc54d84bd1f9.png" tvg-rec="7" catchup-days="7",Nickelodeon HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/yes-nickelodeon-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="nick-jr-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/272b36c1fe37b47d4facf3d3739b8351.png" tvg-rec="7" catchup-days="7",Nick Jr HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/nick-jr-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="teennick-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/f8f9116dda63ae9634779d589461d9a2.png" tvg-rec="7" catchup-days="7",TeenNick HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/teennick-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hop-childhood-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/f1cf7afb7d0b38cc1ca069774c9713eb.png" tvg-rec="7" catchup-days="7",HOP HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hop-childhood-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="luli-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/d45513275e9dd573246010d008185ec1.png" tvg-rec="7" catchup-days="7",Luli
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/luli-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="baby-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/dfb1abd80b9a1255ce3d1acc72a4610b.png" tvg-rec="7" catchup-days="7",Baby HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/baby-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="zoom-il" tvg-logo="https://play-berry.net/storage/images/channel_logos/f90081d51c2645c6fb617c6402f2eb67.png" tvg-rec="7" catchup-days="7",Zoom HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/zoom-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="zoom-toon-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/7fa3b32ab67dcea54ba5543a3439334a.png" tvg-rec="7" catchup-days="7",Zoom Toon HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/zoom-toon-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="kan23-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/8e37e18c472fa294b88b9f2431c0726d.png" tvg-rec="7" catchup-days="7",Kan 23 HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/kan23-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="junior-il" tvg-logo="https://play-berry.net/storage/images/pack_logos/c4afc4ff4c3bd8e9d7c6df6046d66850.png" tvg-rec="7" catchup-days="7",Junior HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/junior-il/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="music-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/e74ab1b6d7349cc3e01d0adce26465c0.png" tvg-rec="0" catchup-days="0",Music HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/music-il-hd/video.m3u8
+#EXTINF:0 group-title="Israel" tvg-id="hot-senior-il-hd" tvg-logo="https://play-berry.net/storage/images/channel_logos/b43e745152aa6558778594104182cf9a.png" tvg-rec="0" catchup-days="0",HOT Senior HD
+#EXTGRP:Israel
+https://rasp.berry-stream.net:1601/s/bmtin1qj/hot-senior-il-hd/video.m3u8

@@ -1,0 +1,4 @@
+Flask==3.0.3
+requests==2.32.3
+bencodepy==0.9.5
+opensubtitlescom==0.1.4

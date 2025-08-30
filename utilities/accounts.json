@@ -1,0 +1,40 @@
+{
+  "accounts": [
+    {
+      "username": "danithedin",
+      "password": "bid23t156dF",
+      "key": "2TK3NBDhmzOSkGRnO7D2bjNqIuSl1e8P",
+      "app": "danidin v1.5.3"
+    },
+    {
+      "username": "user0001",
+      "password": "nooneqq11",
+      "key": "vofyEfJmHSPgco7ktgAS85z5eqSnZ0kh",
+      "app": "my_project v0.1.5"
+    },
+    {
+      "username": "mentos156",
+      "password": "f3Sds8t4kl",
+      "key": "iw2AhsPs2EUx3B474cDn0NJuWJ85Iqgx",
+      "app": "my_cool_project v2.0.0"
+    },
+    {
+      "username": "shmolik132",
+      "password": "mycoolpass",
+      "key": "TsTxSLxJZpHG9OZ5aBqqfkKfrR0oKbod",
+      "app": "project1031 v1.0.1"
+    },
+    {
+      "username": "nooneqq111",
+      "password": "sadfas43tg",
+      "key": "On37FGOfroYBe6DRh3QX5M8o7q2EXicg",
+      "app": "test v1.5.2"
+    },
+    {
+      "username": "shoko123",
+      "password": "fbaigr9237452ad",
+      "key": "oLbzt91rAoRujDQqkVPY0UTtXO2V7r2c",
+      "app": "shokolita v2.1.2"
+    }
+  ]
+}
