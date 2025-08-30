@@ -2,7 +2,7 @@
 # Termux install script
 
 # Update and upgrade Termux packages
-echo "🔄 Updating and upgrading Termux..."
+echo "🔄 Updating and upgrading Termux......"
 pkg update -y && pkg upgrade -y
 
 
