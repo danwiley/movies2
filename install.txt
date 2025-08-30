@@ -41,4 +41,5 @@ mkdir media
 mv run.sh ..
 cd
 chmod +x run.sh
+clear
 
