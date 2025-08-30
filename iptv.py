@@ -22,7 +22,7 @@ class iptv_class:
 
     def create_df(self):
         # Load the M3U content (you can also read from a file)
-        with open('utilities\playlist.m3u', 'r', encoding='utf-8') as file:
+        with open('utilities/playlist.m3u', 'r', encoding='utf-8') as file:
             lines = file.readlines()
 
         channels = []
@@ -103,6 +103,7 @@ class iptv_class:
 
         self.schedule_df = pd.DataFrame(rows)
         self.schedule_df.to_csv('utilities/schedule.csv', index=False)
+
 
 
 
