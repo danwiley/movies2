@@ -19,7 +19,7 @@ var client, corrent_torrent, corrent_movie;
 
 app.use(cors());
 
-var DIR ='D:\movies';
+var DIR ='/data/data/com.termux/files/home/movies/media';
 var PORT = parseArg('--port') || parseArg('-p') || process.env.PORT || 5020;
 
 server.listen(PORT);
@@ -130,7 +130,8 @@ function addTorrent(incoming) {
 	client = torrentStream(incoming, {
 		uploads: 3,
 		connections: 300,
-		path: DIR
+		path: DIR,
+		tmp: '/data/data/com.termux/files/home/movies/downloads'
 	});
 }
 
