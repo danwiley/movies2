@@ -20,7 +20,7 @@ python -m venv venv
 # Activate the virtual environment
 echo "⚡ Activating virtual environment..."
 source venv/bin/activate
-
+pip install --upgrade pip
 mv movies2 movies
 
 # Install required Python packages
