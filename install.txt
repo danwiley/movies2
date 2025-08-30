@@ -9,7 +9,7 @@ echo "🔄 Updating and upgrading Termux..."
 echo "⬇️ Installing items..."
 pkg install -y git python nodejs 
 pkg install -y tur-repo
-pkg install -y python-pandas
+#pkg install -y python-pandas
 
 # Clone the GitHub repository
 echo "📥 Cloning movies repository..."
