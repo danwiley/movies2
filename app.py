@@ -174,7 +174,7 @@ def delete_contents(directory):
 
 def background_task():
     today = datetime.today().day
-    #get_popular_movies()
+    get_popular_movies()
     print("update popular movies")
     while True:
         time.sleep(300)
@@ -202,5 +202,6 @@ if __name__ == '__main__':
         threading.Thread(target=background_task, daemon=True).start()
 
     app.run(debug=True,host='0.0.0.0')
+
 
 
