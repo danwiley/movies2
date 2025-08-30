@@ -3,7 +3,7 @@
 
 # Update and upgrade Termux packages
 echo "🔄 Updating and upgrading Termux..."
-pkg update -y && pkg upgrade -y
+#pkg update -y && pkg upgrade -y
 
 # Install git
 echo "⬇️ Installing items..."
