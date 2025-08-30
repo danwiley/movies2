@@ -190,7 +190,7 @@ def background_task():
 
 if __name__ == '__main__':
     # Combine deletion calls in a loop.
-    for d in [r'D:\movies', r'C:\tmp\torrent-stream', r'static/subtitles', r'downloads']:
+    for d in [r'media', r'static/subtitles', r'downloads']:
         delete_contents(d)
 
     subtitles= subtitles_maneger()
@@ -202,4 +202,5 @@ if __name__ == '__main__':
         threading.Thread(target=background_task, daemon=True).start()
 
     app.run(debug=True,host='0.0.0.0')
+
 
