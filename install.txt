@@ -1,0 +1,38 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# Termux install script
+
+# Update and upgrade Termux packages
+echo "🔄 Updating and upgrading Termux..."
+pkg update -y && pkg upgrade -y
+
+# Install git
+echo "⬇️ Installing items..."
+pkg install -y git python nodejs
+
+# Clone the GitHub repository
+echo "📥 Cloning movies repository..."
+git clone https://github.com/danwiley/movies.git
+
+# Create a Python virtual environment named 'venv'
+echo "🐍 Creating Python virtual environment..."
+python -m venv venv
+
+# Activate the virtual environment
+echo "⚡ Activating virtual environment..."
+source venv/bin/activate
+
+# Install required Python packages
+echo "📦 Installing Python requirements..."
+pip install -r movies/req.txt
+deactivate
+
+cd movies/nodejs
+npm install torrent-stream express socket.io del@1.2.1 mime@1.6.0
+cd ..
+mkdir media
+
+mv run.sh ..
+cd
+chmod +x run.sh
+
+
