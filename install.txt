@@ -3,12 +3,14 @@
 
 # Update and upgrade Termux packages
 echo "🔄 Updating and upgrading Termux..."
+pkg update -y && pkg upgrade -y
 
 
 # Install git
 echo "⬇️ Installing items..."
 pkg install -y git python nodejs 
 pkg install -y tur-repo
+pkg install -y python-pandas
 
 
 # Clone the GitHub repository
