@@ -8,9 +8,7 @@ pkg update -y && pkg upgrade -y
 
 # Install git
 echo "⬇️ Installing items....."
-pkg install -y git python nodejs 
-pkg install -y tur-repo
-pkg install -y python-pandas
+pkg install -y git python tur-repo nodejs python-pandas
 
 
 # Clone the GitHub repository
