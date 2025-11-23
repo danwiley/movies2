@@ -136,7 +136,7 @@ def get_popular_movies():
     matches = re.findall(pattern, response.text)
     movies = []
     for imdb_id in matches:
-        movie_response = requests.get(f"https://yts.mx/api/v2/movie_details.json?imdb_id={imdb_id}")
+        movie_response = requests.get(f"https://yts.lt/api/v2/movie_details.json?imdb_id={imdb_id}")
         movie = movie_response.json().get("data", {}).get("movie", {})
         if movie.get("id"):
             movies.append(movie)
@@ -202,6 +202,7 @@ if __name__ == '__main__':
         threading.Thread(target=background_task, daemon=True).start()
 
     app.run(debug=True,host='0.0.0.0')
+
 
 
 
