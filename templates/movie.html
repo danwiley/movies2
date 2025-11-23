@@ -94,7 +94,7 @@
         return;
       }
       // Fetch movie details from YTS
-      fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${movieId}`)
+      fetch(`https://yts.lt/api/v2/movie_details.json?movie_id=${movieId}`)
         .then(r => r.json())
         .then(data => {
           if (data.data && data.data.movie) {
@@ -279,3 +279,4 @@
   </script>
 </body>
 </html>
+
